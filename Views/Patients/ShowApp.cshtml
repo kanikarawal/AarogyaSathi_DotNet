@@ -1,0 +1,90 @@
+﻿@model IEnumerable<AarogyaSaathi.Models.Appointment>
+
+@{
+
+    ViewData["Title"] = "ShowApp";
+
+}
+
+<h1>My Appointments</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DoctorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptoms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.PatientId)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @{
+                        var doctorName = GetDoctorName(item.DoctorId);
+                        @doctorName
+                    }
+                 @*   @{ switch (item.DoctorId)
+                    {
+                    case "1d0a1ca0-78dc-4c45-843d-ea43a649627a" :
+                    ViewBag.dName= "Dr. Abhishek Shukla";
+                    break;
+                    case "a767da6a-82b8-4031-9197-ee4f1c8cb6b5":
+                    ViewBag.dName = "Dr. Seema Shrivastava";
+                    break;
+                    
+                    }
+                    }
+                    @ViewBag.dName *@
+
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Symptoms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.PatientId)
+            </td> *@
+            <td>
+                    <a asp-action="EditApp" asp-route-id="@item.Id" class="btn btn-success">Edit</a> |
+                   
+                    <a asp-action="DeleteApp" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@functions {
+    string GetDoctorName(string doctorId)
+    {
+        switch (doctorId)
+        {
+            case "1d0a1ca0-78dc-4c45-843d-ea43a649627a":
+                return "Dr. Abhishek Shukla";
+            case "a767da6a-82b8-4031-9197-ee4f1c8cb6b5":
+                return "Dr. Seema Shrivastava";
+            default:
+                return "Unknown Doctor";
+        }
+    }
+}

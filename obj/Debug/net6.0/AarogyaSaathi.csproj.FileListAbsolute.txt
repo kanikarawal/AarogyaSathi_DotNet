@@ -313,3 +313,4 @@ D:\DAC\Projects\.Net\AarogyaSaathi\obj\Debug\net6.0\AarogyaSaathi.MvcApplication
 D:\DAC\Projects\.Net\AarogyaSaathi\obj\Debug\net6.0\scopedcss\Views\Shared\_PatientLayout.cshtml.rz.scp.css
 D:\DAC\Projects\.Net\AarogyaSaathi\obj\Debug\net6.0\scopedcss\Views\Shared\_AdminLayout.cshtml.rz.scp.css
 D:\DAC\Projects\.Net\AarogyaSaathi\obj\Debug\net6.0\scopedcss\Views\Shared\_DoctorLayout.cshtml.rz.scp.css
+D:\DAC\Projects\.Net\AarogyaSaathi\obj\Debug\net6.0\AarogyaSaathi.sourcelink.json

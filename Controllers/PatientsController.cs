@@ -8,7 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using AarogyaSaathi.Data;
 using AarogyaSaathi.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using AarogyaSaathi.Dto;
+using System.Security.Claims;
 
 namespace AarogyaSaathi.Controllers
 {
@@ -25,9 +27,9 @@ namespace AarogyaSaathi.Controllers
         // GET: Patients
         public async Task<IActionResult> Index()
         {
-              return _context.PatientData != null ? 
-                          View(await _context.PatientData.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.PatientData'  is null.");
+            return _context.PatientData != null ?
+                        View(await _context.PatientData.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.PatientData'  is null.");
         }
 
         // GET: Patients/Details/5
@@ -171,11 +173,90 @@ namespace AarogyaSaathi.Controllers
         [HttpPost]
         public IActionResult BookApp(BookingView booking)
         {
+            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var newApp = new Appointment();
-            
 
-            return View();
+            newApp.DoctorId = booking.DoctorId;
+            newApp.Symptoms = booking.Symptoms;
+            newApp.BookingDate = booking.BookingDate;
+            newApp.Status = "pending";
+            newApp.PatientId = userId;
+            _context.AppointmentData.Add(newApp);
+            _context.SaveChanges();
+
+            return RedirectToAction("ShowApp");
         }
 
+        [HttpGet]
+        public IActionResult ShowApp() {
+            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var appointments= _context.AppointmentData.Where(a => a.PatientId == userId).ToList();
+           
+            return View(appointments);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditApp(int? id)
+        {
+            if (id == null || _context.AppointmentData == null)
+            {
+                return NotFound();
+            }
+
+            var currentApp = await _context.AppointmentData.FindAsync(id);
+            if (currentApp == null)
+            {
+                return NotFound();
+            }
+            return View(currentApp);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditApp(int id, BookingView booking)
+        {
+                Appointment currApp = _context.AppointmentData.Find(id);
+                currApp.Symptoms = booking.Symptoms;
+                currApp.BookingDate = booking.BookingDate;
+                _context.Update(currApp);
+                    await _context.SaveChangesAsync();
+                    
+                return RedirectToAction("ShowApp");
+        }
+       
+        public async Task<IActionResult> DeleteApp(int? id)
+        {
+            if (id == null || _context.AppointmentData == null)
+            {
+                return NotFound();
+            }
+
+            var currApp = await _context.AppointmentData
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (currApp == null)
+            {
+                return NotFound();
+            }
+
+            return View(currApp);
+        }
+
+        [HttpPost, ActionName("DeleteApp")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteAppConfirmed(int id)
+        {
+            if (_context.AppointmentData == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.AppointmentData'  is null.");
+            }
+            var currApp = await _context.AppointmentData.FindAsync(id);
+            if (currApp != null)
+            {
+                _context.AppointmentData.Remove(currApp);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("ShowApp");
+        }
     }
 }

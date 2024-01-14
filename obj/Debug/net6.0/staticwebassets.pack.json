@@ -9,8 +9,72 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\admin.png",
+      "PackagePath": "staticwebassets\\img\\admin.png"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\checkup.jpg",
+      "PackagePath": "staticwebassets\\img\\checkup.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\doctor team.jpg",
+      "PackagePath": "staticwebassets\\img\\doctor team.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\doctor_2785482.png",
+      "PackagePath": "staticwebassets\\img\\doctor_2785482.png"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\logo.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\oncologist_3.jpg",
+      "PackagePath": "staticwebassets\\img\\oncologist_3.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\patient.png",
+      "PackagePath": "staticwebassets\\img\\patient.png"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\pulmonologist_5.jpg",
+      "PackagePath": "staticwebassets\\img\\pulmonologist_5.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\team\\Kanika.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\Kanika.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\team\\nishant.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\nishant.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\team\\om.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\om.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\team\\vaibhav.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\vaibhav.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\team\\yash.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\yash.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\test.jpg",
+      "PackagePath": "staticwebassets\\img\\test.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\img\\treatment_05.jpg",
+      "PackagePath": "staticwebassets\\img\\treatment_05.jpg"
     },
     {
       "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\js\\site.js",

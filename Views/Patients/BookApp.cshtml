@@ -4,20 +4,68 @@
     ViewData["Title"] = "BookApp";
 }
 
-<h1>BookApp</h1>
 
-<h4>BookingView</h4>
+
+<h4 style="text-align:center">Book Your Appointment Here !!</h4>
 <hr />
-<div class="row">
+<div>
+    <div>
+    <h2>Doctor List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Doctor ID</th>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Qualification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Doctor 1</td>
+                <td>Dr. Aarav Kumar</td>
+                <td>Cardiologist</td>
+                <td>MBBS, MD</td>
+            </tr>
+            <tr>
+                    <td>Doctor 2</td>
+                <td>Dr. Riya Sharma</td>
+                <td>Orthopedic Surgeon</td>
+                <td>MBBS, MS</td>
+            </tr>
+            <tr>
+                    <td>Doctor 3</td>
+                <td>Dr. Advait Patel</td>
+                <td>Ophthalmologist</td>
+                <td>MBBS, DNB</td>
+            </tr>
+            <tr>
+                    <td>Doctor 4</td>
+                <td>Dr. Naina Reddy</td>
+                <td>Dermatologist</td>
+                <td>MBBS, MD</td>
+            </tr>
+            <tr>
+                    <td>Doctor 5</td>
+                <td>Dr. Aniket Singh</td>
+                <td>Physician</td>
+                <td>MBBS, MS</td>
+            </tr>
+           
+    </table>
+    </div>
+<div class="row"style="text-align:center" >
     <div class="col-md-4">
         <form asp-action="BookApp">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DoctorId" class="control-label"></label>
-                <select asp-for="DoctorId" class="form-control" />
+                <select asp-for="DoctorId" class="form-control" >
                 <option value="">Select a doctor</option>
                 <option value="a767da6a-82b8-4031-9197-ee4f1c8cb6b5">Doctor 1</option>
                 <option value="1d0a1ca0-78dc-4c45-843d-ea43a649627a">Doctor 2</option>
+                </select>
                 <span asp-validation-for="DoctorId" class="text-danger"></span>
             </div>
             <br/>
@@ -26,18 +74,20 @@
                 <input asp-for="Symptoms" class="form-control" placeholder="Enter symptoms"/>
                 <span asp-validation-for="Symptoms" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="BookingDate" class="control-label"></label>
                 <input asp-for="BookingDate" class="form-control" />
                 <span asp-validation-for="BookingDate" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+</div>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
