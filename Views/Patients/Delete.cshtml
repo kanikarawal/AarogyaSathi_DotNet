@@ -4,11 +4,11 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+
+<h3>Are you sure you want to delete this patient's record?</h3>
 <div>
-    <h4>Patient</h4>
+   
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -24,7 +24,7 @@
             @Html.DisplayFor(model => model.Gender)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateOfBirth)
+           Date of Birth
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DateOfBirth)
@@ -36,12 +36,12 @@
             @Html.DisplayFor(model => model.City)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MobileNo)
+           Mobile Number
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.MobileNo)
         </dd>
-        <dt class = "col-sm-2">
+       @*  <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.email)
         </dt>
         <dd class = "col-sm-10">
@@ -52,7 +52,7 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Password)
-        </dd>
+        </dd> *@
     </dl>
     
     <form asp-action="Delete">

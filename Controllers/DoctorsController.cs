@@ -154,7 +154,7 @@ namespace AarogyaSaathi.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("ShowApp");
         }
 
         private bool AppointmentExists(int id)

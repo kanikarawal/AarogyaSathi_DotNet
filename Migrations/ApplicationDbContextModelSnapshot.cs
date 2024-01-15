@@ -86,6 +86,33 @@ namespace AarogyaSaathi.Migrations
                     b.ToTable("AppointmentData");
                 });
 
+            modelBuilder.Entity("AarogyaSaathi.Models.Doctor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("MobileNo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Qualification")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Specialization")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DoctorData");
+                });
+
             modelBuilder.Entity("AarogyaSaathi.Models.Patient", b =>
                 {
                     b.Property<int>("Id")
@@ -104,18 +131,11 @@ namespace AarogyaSaathi.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<long>("MobileNo")
-                        .HasColumnType("bigint");
+                    b.Property<string>("MobileNo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("email")
                         .IsRequired()
                         .HasColumnType("longtext");
 

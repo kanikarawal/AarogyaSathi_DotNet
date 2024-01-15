@@ -4,9 +4,7 @@
     ViewData["Title"] = "EditApp";
 }
 
-<h1>EditApp</h1>
-
-<h4>Appointment</h4>
+<h3>Edit Appointment</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -49,7 +47,7 @@
             </div> *@
             <br />
             <div class="form-group">
-                <label asp-for="Symptoms" class="control-label"></label>
+                <label asp-for="Symptoms" class="control-label">Appointment Date</label>
                 <input asp-for="Symptoms" class="form-control" placeholder="Enter symptoms" />
                 <span asp-validation-for="Symptoms" class="text-danger"></span>
             </div>
@@ -59,6 +57,7 @@
                 <input asp-for="BookingDate" class="form-control" />
                 <span asp-validation-for="BookingDate" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

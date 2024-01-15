@@ -17,5 +17,6 @@ namespace AarogyaSaathi.Data
         public DbSet<AarogyaSaathi.Dto.BookingView>? BookingView { get; set; }
         public DbSet<Appointment> AppointmentData { get; set; }
         public DbSet<PatientHistory> PatientHistory { get; set; }
+        public DbSet<Doctor> DoctorData { get; set; }
     }
 }
