@@ -10,24 +10,24 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3" style="background-color:#864AF9; color:white">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3" ; color:white">
             <div class="container-fluid">
                 <img src="~/img/logo.jpg" width="80px" height="80px"/>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color:white"><b>Aarogya Saathi</b></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" ><b>Aarogya Saathi</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard" ><b>Home</b></a>
+                        </li> *@
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index" style="color:white"><b>Home</b></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs" ><b>About Us</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="AboutUs" style="color:white"><b>About Us</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy" style="color:white"><b>Contact Us</b></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy" ><b>Contact Us</b></a>
                         </li>
                        
                         

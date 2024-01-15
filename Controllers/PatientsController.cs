@@ -219,7 +219,7 @@ namespace AarogyaSaathi.Controllers
                 currApp.Symptoms = booking.Symptoms;
                 currApp.BookingDate = booking.BookingDate;
                 _context.Update(currApp);
-                    await _context.SaveChangesAsync();
+                 await _context.SaveChangesAsync();
                     
                 return RedirectToAction("ShowApp");
         }
