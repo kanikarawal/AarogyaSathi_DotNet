@@ -258,6 +258,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientHistories/Create2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xDcmVhdGUyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientHistories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -266,12 +270,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientHistories/Details2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xEZXRhaWxzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientHistories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientHistories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientHistories/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEhpc3Rvcmllc1xJbmRleDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DAC/Projects/.Net/AarogyaSaathi/Views/PatientRecords/Create.cshtml]

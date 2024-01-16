@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AarogyaSaathi.Data;
 using AarogyaSaathi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AarogyaSaathi.Controllers
 {
+    //[Authorize(Roles = "Doctor")]
+    //[Authorize(Roles = "Admin")]
     public class PatientHistoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -28,8 +31,32 @@ namespace AarogyaSaathi.Controllers
            // return View();
         }
 
+        public async Task<IActionResult> Index2()
+        {
+            return _context.PatientHistory != null ?
+                        View(await _context.PatientHistory.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.PatientHistory'  is null.");
+            // return View();
+        }
+
         // GET: PatientHistories/Details/5
         public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || _context.PatientHistory == null)
+            {
+                return NotFound();
+            }
+
+            var patientHistory = await _context.PatientHistory
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (patientHistory == null)
+            {
+                return NotFound();
+            }
+
+            return View(patientHistory);
+        }
+        public async Task<IActionResult> Details2(int? id)
         {
             if (id == null || _context.PatientHistory == null)
             {
@@ -52,6 +79,11 @@ namespace AarogyaSaathi.Controllers
             return View();
         }
 
+        public IActionResult Create2()
+        {
+            return View();
+        }
+
         // POST: PatientHistories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -64,6 +96,19 @@ namespace AarogyaSaathi.Controllers
                 _context.Add(patientHistory);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            }
+            return View(patientHistory);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create2([Bind("Id,Name,Gender,Age,visitDate,doctorName,symptoms,medicine,remark")] PatientHistory patientHistory)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(patientHistory);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index2));
             }
             return View(patientHistory);
         }

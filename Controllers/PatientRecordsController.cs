@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AarogyaSaathi.Data;
 using AarogyaSaathi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AarogyaSaathi.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PatientRecordsController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -9,9 +9,11 @@ using AarogyaSaathi.Data;
 using AarogyaSaathi.Models;
 using System.Security.Claims;
 using AarogyaSaathi.Dto;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AarogyaSaathi.Controllers
 {
+    [Authorize(Roles = "Doctor")]
     public class DoctorsController : Controller
     {
         private readonly ApplicationDbContext _context;
