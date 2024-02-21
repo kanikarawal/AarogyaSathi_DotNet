@@ -11,8 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace AarogyaSaathi.Controllers
 {
-    //[Authorize(Roles = "Doctor")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Doctor,Admin")]
     public class PatientHistoriesController : Controller
     {
         private readonly ApplicationDbContext _context;

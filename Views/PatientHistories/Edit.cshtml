@@ -4,9 +4,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit a history report</h1>
+<h3>Edit Patient History Report</h3>
 
-<h4>PatientHistory</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,12 +28,12 @@
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="visitDate" class="control-label"></label>
+                <label asp-for="visitDate" class="control-label">Visit Date</label>
                 <input asp-for="visitDate" class="form-control" />
                 <span asp-validation-for="visitDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="doctorName" class="control-label"></label>
+                <label asp-for="doctorName" class="control-label">Doctor Name</label>
                 <input asp-for="doctorName" class="form-control" />
                 <span asp-validation-for="doctorName" class="text-danger"></span>
             </div>
