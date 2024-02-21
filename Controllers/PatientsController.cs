@@ -175,16 +175,16 @@ namespace AarogyaSaathi.Controllers
         {
             var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var newApp = new Appointment();
-
-            newApp.DoctorId = booking.DoctorId;
-            newApp.Symptoms = booking.Symptoms;
-            newApp.BookingDate = booking.BookingDate;
-            newApp.Status = "pending";
-            newApp.PatientId = userId;
-            _context.AppointmentData.Add(newApp);
-            _context.SaveChanges();
-
-            return RedirectToAction("ShowApp");
+           
+            
+                newApp.DoctorId = booking.DoctorId;
+                newApp.Symptoms = booking.Symptoms;
+                newApp.BookingDate = booking.BookingDate;
+                newApp.Status = "pending";
+                newApp.PatientId = userId;
+                _context.AppointmentData.Add(newApp);
+                _context.SaveChanges();
+             return RedirectToAction("ShowApp");
         }
 
         [HttpGet]

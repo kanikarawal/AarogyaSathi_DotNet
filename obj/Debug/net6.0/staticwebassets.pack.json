@@ -9,6 +9,34 @@
       "PackagePath": "staticwebassets\\assets\\css\\aboutusstyle.css"
     },
     {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\css\\stylef.css",
+      "PackagePath": "staticwebassets\\assets\\css\\stylef.css"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\1.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\2.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\3.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\4.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\5.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\about-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about-img.jpg"
+    },
+    {
       "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\departments-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\departments-1.jpg"
     },
@@ -51,6 +79,14 @@
     {
       "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\hero-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\hero-bg.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\login.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\login.jpg"
+    },
+    {
+      "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\img\\register.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\register.jpg"
     },
     {
       "Id": "D:\\DAC\\Projects\\.Net\\AarogyaSaathi\\wwwroot\\assets\\vendor\\animate.css\\animate.compat.css",

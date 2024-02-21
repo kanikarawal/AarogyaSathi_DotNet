@@ -1,15 +1,17 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "AboutUs";
 }
 
 
 <partial name="_PartialLayoutAboutUs">
 
+    
+
 <body>
         <partial name="_DashboardPartialView" />
         <partial name="_PartialLayoutAboutUs" />
-    <section id="departments" class="departments">
+       
+        <section id="departments" class="departments" style="margin:0; padding-top: 0"; >
             <div style="color:rgb(44, 73, 100)">
                 <h2 class="section-title"><b>Welcome to Aarogya Sathi where healthcare meets innovation!</b></h2>
                 <p>
@@ -108,14 +110,15 @@
             </div>
 
         </div>
-    </section>
+  
+        </section>
         <section id="doctors" class="doctors">
             <div class="container">
 
                 <div class="section-title">
                     <h2>Doctors</h2>
                 </div>
-                
+
                 <div class="row">
 
                     <div class="col-lg-6">
@@ -124,7 +127,7 @@
                             <div class="member-info">
                                 <h4>Dr. Riya Sharma</h4>
                                 <span>Chief Medical Officer, Orthopaedic Surgeon</span>
-                                  <p>M.B.B.S., M.S.</p>
+                                <p>M.B.B.S., M.S.</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -206,6 +209,4 @@
 
             </div>
         </section><!-- End Doctors Section -->
-    
     </body>
-

@@ -8,7 +8,7 @@ namespace AarogyaSaathi.Models
        
         public int Id { get; set; }
         [Required(ErrorMessage = "Name is required.")]
-        [RegularExpression(@"^[a-zA-Z ]+$", ErrorMessage = "Only uppercase and lowercase alphabets are allowed")]
+        [RegularExpression(@"^[a-zA-Z .]+$", ErrorMessage = "Only uppercase and lowercase alphabets are allowed")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Mobile Number is required.")]
